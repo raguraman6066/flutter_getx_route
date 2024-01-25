@@ -13,7 +13,7 @@ class GetNavigationPage extends StatelessWidget {
       // unknownRoute: GetPage(name: '/notfound', page: () => UnknownRoutePage()),
       getPages: [
         GetPage(name: '/', page: () => const GetNavigationPage()),
-        GetPage(name: '/next/:id', page: () => const NextScreen()),
+        GetPage(name: '/next', page: () => const NextScreen()),
       ],
       // If you want to listen Get events to trigger actions,
       // you can to use routingCallback to it
@@ -73,7 +73,7 @@ class GetNavigationPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Get.offNamed(
-                    '/next',
+                    '/next?id=123',
                     arguments: 'Hello World from Get.offNamed("/next")',
                   );
                 },
